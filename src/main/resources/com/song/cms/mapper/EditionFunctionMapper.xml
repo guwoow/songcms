@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.song.cms.mapper.EditionFunctionMapper" >
+  <resultMap id="BaseResultMap" type="com.song.cms.model.EditionFunction" >
+    <id column="edition_function_id" property="editionFunctionId" jdbcType="VARCHAR" />
+    <result column="edition_id" property="editionId" jdbcType="VARCHAR" />
+    <result column="function_id" property="functionId" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    edition_function_id, edition_id, function_id
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.song.cms.model.EditionFunctionExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from edition_function
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from edition_function
+    where edition_function_id = #{editionFunctionId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from edition_function
+    where edition_function_id = #{editionFunctionId,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.song.cms.model.EditionFunctionExample" >
+    delete from edition_function
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.song.cms.model.EditionFunction" >
+    insert into edition_function (edition_function_id, edition_id, function_id
+      )
+    values (#{editionFunctionId,jdbcType=VARCHAR}, #{editionId,jdbcType=VARCHAR}, #{functionId,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.song.cms.model.EditionFunction" >
+    insert into edition_function
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="editionFunctionId != null" >
+        edition_function_id,
+      </if>
+      <if test="editionId != null" >
+        edition_id,
+      </if>
+      <if test="functionId != null" >
+        function_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="editionFunctionId != null" >
+        #{editionFunctionId,jdbcType=VARCHAR},
+      </if>
+      <if test="editionId != null" >
+        #{editionId,jdbcType=VARCHAR},
+      </if>
+      <if test="functionId != null" >
+        #{functionId,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.song.cms.model.EditionFunctionExample" resultType="java.lang.Integer" >
+    select count(*) from edition_function
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update edition_function
+    <set >
+      <if test="record.editionFunctionId != null" >
+        edition_function_id = #{record.editionFunctionId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.editionId != null" >
+        edition_id = #{record.editionId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.functionId != null" >
+        function_id = #{record.functionId,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update edition_function
+    set edition_function_id = #{record.editionFunctionId,jdbcType=VARCHAR},
+      edition_id = #{record.editionId,jdbcType=VARCHAR},
+      function_id = #{record.functionId,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.song.cms.model.EditionFunction" >
+    update edition_function
+    <set >
+      <if test="editionId != null" >
+        edition_id = #{editionId,jdbcType=VARCHAR},
+      </if>
+      <if test="functionId != null" >
+        function_id = #{functionId,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where edition_function_id = #{editionFunctionId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.song.cms.model.EditionFunction" >
+    update edition_function
+    set edition_id = #{editionId,jdbcType=VARCHAR},
+      function_id = #{functionId,jdbcType=VARCHAR}
+    where edition_function_id = #{editionFunctionId,jdbcType=VARCHAR}
+  </update>
+</mapper>
