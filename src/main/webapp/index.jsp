@@ -23,10 +23,13 @@
 
 			<section class="content container-fluid">
 
+				<form action="/default/upload" method="post" enctype="multipart/form-data">
+					<input type="file" name="files" accept="image/jpeg,image/png,image/gif" /> <input type="submit" value="提交" />
+				</form>
 				<!--------------------------
         		| Your Page Content Here |
         		-------------------------->
-
+				${request.getRequestURI()} ${application.getRealPath(request.getRequestURI())}
 			</section>
 		</div>
 

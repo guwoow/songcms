@@ -19,8 +19,6 @@ public class FunctionController {
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	public ModelAndView list() {
 		ModelAndView modelandview = new ModelAndView();
-		FunctionExample example = null;
-		functionService.selectByExample(example);
 		return modelandview;
 	}
 }
