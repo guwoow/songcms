@@ -12,11 +12,16 @@
 		</div>
 
 		<ul class="sidebar-menu" data-widget="tree">
-			<li class="active treeview"><a href="#"><i class="fa fa-link"></i> <span>系统管理</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i>
+			<li class="treeview"><a href="#"><i class="fa fa-link"></i> <span>系统管理</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i>
 				</span> </a>
 				<ul class="treeview-menu">
-					<li class="active"><a href="/function/list">功能包</a></li>
+					<li><a href="/function/list">功能包</a></li>
 					<li><a href="/edition/list">版本控制</a></li>
+				</ul></li>
+			<li class="treeview"><a href="#"><i class="fa fa-link"></i> <span>内容管理</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i>
+				</span> </a>
+				<ul class="treeview-menu">
+					<li><a href="/content/gallerylist">图库</a></li>
 				</ul></li>
 		</ul>
 	</section>

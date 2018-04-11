@@ -4,7 +4,7 @@
 <head>
 <%@ include file="/WEB-INF/view/layout/head.jsp"%>
 </head>
-<body class="skin-blue">
+<body class="skin-default">
 	<div class="wrapper">
 		<%@ include file="/WEB-INF/view/layout/header.jsp"%>
 
@@ -26,6 +26,14 @@
 				<!--------------------------
         		| Your Page Content Here |
         		-------------------------->
+				<ul>
+					<li><%=request.getServletPath()%></li>
+					<li><%=request.getServletContext().getRealPath("/")%></li>
+					<li><%=System.getProperty("cms.webapp")%></li>
+					<li><%=request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
+					+ request.getContextPath() + "/"%></li>
+					<li><%=request.getSession().getServletContext().getRealPath("")%></li>
+				</ul>
 
 			</section>
 		</div>

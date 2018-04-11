@@ -57,8 +57,7 @@
 						<li class="footer"><a href="#">View all tasks</a></li>
 					</ul></li>
 
-				<li class="dropdown user user-menu"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><img
-						src="<%=request.getContextPath()%>/resources/AdminLTE/2.4.3/img/user4-128x128.jpg" class="user-image" alt="User Image"> <span class="hidden-xs">管理员</span></a>
+				<li class="dropdown user user-menu"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="<%=request.getContextPath()%>/resources/AdminLTE/2.4.3/img/user4-128x128.jpg" class="user-image" alt="User Image"> <span class="hidden-xs">管理员</span></a>
 					<ul class="dropdown-menu">
 						<li class="user-header"><img src="<%=request.getContextPath()%>/resources/AdminLTE/2.4.3/img/user4-128x128.jpg" class="img-circle" alt="User Image">
 							<p>
