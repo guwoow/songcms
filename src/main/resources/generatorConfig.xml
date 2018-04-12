@@ -21,8 +21,8 @@
 			targetProject="src/main/resources" />
 		<javaClientGenerator targetPackage="com.song.cms.mapper"
 			targetProject="src/main/java" type="XMLMAPPER" />
-			
-		<table schema="songcms" tableName="%" />
 
+		<!-- <table schema="songcms" tableName="%" /> -->
+		<table schema="songcms" tableName="gallery" />
 	</context>
 </generatorConfiguration>

@@ -17,7 +17,7 @@
 		alert(window.location.host);
 		alert(window.location.search); */
 		var liCurrent = $("a[href='" + window.location.pathname + "']").parent();
-		$(liCurrent).addClass("active");
 		$(liCurrent).parent().parent().addClass("active");
+		$(liCurrent).addClass("active");
 	});
 </script>
