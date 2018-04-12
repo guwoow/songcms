@@ -18,10 +18,10 @@
 					<li><a href="/function/list"><i class="fa fa-folder-open"></i> 功能包</a></li>
 					<li><a href="/edition/list"><i class="fa fa-list"></i> 版本控制</a></li>
 				</ul></li>
-			<li class="treeview"><a href="javascript:void(0)"><i class="fa fa-folder"></i> <span>内容管理</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i>
+			<li class="treeview active"><a href="javascript:void(0)"><i class="fa fa-folder"></i> <span>内容管理</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i>
 				</span> </a>
 				<ul class="treeview-menu">
-					<li><a href="/gallery/list"><i class="fa fa-photo"></i>图库</a></li>
+					<li class="active"><a href="/gallery/list"><i class="fa fa-photo"></i>图库</a></li>
 				</ul></li>
 		</ul>
 	</section>
