@@ -23,6 +23,6 @@
 			targetProject="src/main/java" type="XMLMAPPER" />
 
 		<!-- <table schema="songcms" tableName="%" /> -->
-		<table schema="songcms" tableName="gallery" />
+		<table schema="songcms" tableName="function" />
 	</context>
 </generatorConfiguration>

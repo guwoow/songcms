@@ -25,7 +25,7 @@ public class Function {
 
     private Integer sequence;
 
-    private String describe;
+    private String summary;
 
     public String getFunctionId() {
         return functionId;
@@ -115,11 +115,11 @@ public class Function {
         this.sequence = sequence;
     }
 
-    public String getDescribe() {
-        return describe;
+    public String getSummary() {
+        return summary;
     }
 
-    public void setDescribe(String describe) {
-        this.describe = describe;
+    public void setSummary(String summary) {
+        this.summary = summary;
     }
 }

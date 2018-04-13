@@ -52,8 +52,8 @@
 							</div>
 
 							<div class="timeline-body">
-								<c:forEach items="${list}" var="list">
-									<img src="${list.path}" style="height:80px" class="margin">
+								<c:forEach items="${list}" var="gallery">
+									<img src="${gallery.path}" style="height:80px" class="margin">
 								</c:forEach>
 							</div>
 						</div>

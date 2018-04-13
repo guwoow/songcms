@@ -1,15 +1,23 @@
 package com.song.cms.service.impl;
 
 import java.util.List;
+import java.util.UUID;
+
+import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
+import com.song.cms.mapper.FunctionMapper;
 import com.song.cms.model.Function;
 import com.song.cms.model.FunctionExample;
 import com.song.cms.service.FunctionService;
+import com.song.utility.Tool;
 
 @Service
 public class FunctionServiceImpl implements FunctionService {
+
+	@Resource
+	FunctionMapper functionMapper;
 
 	@Override
 	public int countByExample(FunctionExample example) {
@@ -29,9 +37,29 @@ public class FunctionServiceImpl implements FunctionService {
 		return 0;
 	}
 
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see com.song.cms.service.FunctionService#insert(com.song.cms.model.Function)
+	 */
 	@Override
 	public int insert(Function record) {
-		// TODO Auto-generated method stub
+		if (null != record) {
+			if (null == record.getFunctionId() || "" == record.getFunctionId()) {
+				record.setFunctionId(UUID.randomUUID().toString());
+				record.setAddDate(Tool.getCurrentDate());
+				record.setParentId(UUID.randomUUID().toString());
+				record.setIsDelete(false);
+				record.setIsEnable(true);
+				record.setSequence(0);
+				record.setLevel(1);
+				return functionMapper.insert(record);
+			} else {
+				return functionMapper.updateByPrimaryKey(record);
+			}
+		} else {
+
+		}
 		return 0;
 	}
 
@@ -43,8 +71,7 @@ public class FunctionServiceImpl implements FunctionService {
 
 	@Override
 	public List<Function> selectByExample(FunctionExample example) {
-		// TODO Auto-generated method stub
-		return null;
+		return functionMapper.selectByExample(example);
 	}
 
 	@Override

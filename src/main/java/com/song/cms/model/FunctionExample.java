@@ -825,73 +825,73 @@ public class FunctionExample {
             return (Criteria) this;
         }
 
-        public Criteria andDescribeIsNull() {
-            addCriterion("describe is null");
+        public Criteria andSummaryIsNull() {
+            addCriterion("summary is null");
             return (Criteria) this;
         }
 
-        public Criteria andDescribeIsNotNull() {
-            addCriterion("describe is not null");
+        public Criteria andSummaryIsNotNull() {
+            addCriterion("summary is not null");
             return (Criteria) this;
         }
 
-        public Criteria andDescribeEqualTo(String value) {
-            addCriterion("describe =", value, "describe");
+        public Criteria andSummaryEqualTo(String value) {
+            addCriterion("summary =", value, "summary");
             return (Criteria) this;
         }
 
-        public Criteria andDescribeNotEqualTo(String value) {
-            addCriterion("describe <>", value, "describe");
+        public Criteria andSummaryNotEqualTo(String value) {
+            addCriterion("summary <>", value, "summary");
             return (Criteria) this;
         }
 
-        public Criteria andDescribeGreaterThan(String value) {
-            addCriterion("describe >", value, "describe");
+        public Criteria andSummaryGreaterThan(String value) {
+            addCriterion("summary >", value, "summary");
             return (Criteria) this;
         }
 
-        public Criteria andDescribeGreaterThanOrEqualTo(String value) {
-            addCriterion("describe >=", value, "describe");
+        public Criteria andSummaryGreaterThanOrEqualTo(String value) {
+            addCriterion("summary >=", value, "summary");
             return (Criteria) this;
         }
 
-        public Criteria andDescribeLessThan(String value) {
-            addCriterion("describe <", value, "describe");
+        public Criteria andSummaryLessThan(String value) {
+            addCriterion("summary <", value, "summary");
             return (Criteria) this;
         }
 
-        public Criteria andDescribeLessThanOrEqualTo(String value) {
-            addCriterion("describe <=", value, "describe");
+        public Criteria andSummaryLessThanOrEqualTo(String value) {
+            addCriterion("summary <=", value, "summary");
             return (Criteria) this;
         }
 
-        public Criteria andDescribeLike(String value) {
-            addCriterion("describe like", value, "describe");
+        public Criteria andSummaryLike(String value) {
+            addCriterion("summary like", value, "summary");
             return (Criteria) this;
         }
 
-        public Criteria andDescribeNotLike(String value) {
-            addCriterion("describe not like", value, "describe");
+        public Criteria andSummaryNotLike(String value) {
+            addCriterion("summary not like", value, "summary");
             return (Criteria) this;
         }
 
-        public Criteria andDescribeIn(List<String> values) {
-            addCriterion("describe in", values, "describe");
+        public Criteria andSummaryIn(List<String> values) {
+            addCriterion("summary in", values, "summary");
             return (Criteria) this;
         }
 
-        public Criteria andDescribeNotIn(List<String> values) {
-            addCriterion("describe not in", values, "describe");
+        public Criteria andSummaryNotIn(List<String> values) {
+            addCriterion("summary not in", values, "summary");
             return (Criteria) this;
         }
 
-        public Criteria andDescribeBetween(String value1, String value2) {
-            addCriterion("describe between", value1, value2, "describe");
+        public Criteria andSummaryBetween(String value1, String value2) {
+            addCriterion("summary between", value1, value2, "summary");
             return (Criteria) this;
         }
 
-        public Criteria andDescribeNotBetween(String value1, String value2) {
-            addCriterion("describe not between", value1, value2, "describe");
+        public Criteria andSummaryNotBetween(String value1, String value2) {
+            addCriterion("summary not between", value1, value2, "summary");
             return (Criteria) this;
         }
     }
