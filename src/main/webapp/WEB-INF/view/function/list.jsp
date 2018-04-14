@@ -46,10 +46,10 @@
 								<table class="table table-bordered" data-toggle="table" data-url="/function/functionList" data-height="500" data-pagination="true" pageSize="1">
 									<thead>
 										<tr>
-											<th data-field="is_enable" data-checkbox="true"></th>
-											<th data-field="function_id" data-align="right">Item ID</th>
-											<th data-field="name" data-align="center">名称</th>
-											<th data-field="ico" data-align="">图标</th>
+											<th data-field="isEnable" data-checkbox="true"></th>
+											<th data-field="functionId" data-align="left">主键</th>
+											<th data-field="name" data-align="center" data-formate="">名称</th>
+											<th data-field="ico" data-align="center">图标</th>
 										</tr>
 									</thead>
 								</table>
