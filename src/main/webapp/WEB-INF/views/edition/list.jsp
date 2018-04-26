@@ -28,7 +28,6 @@
         		-------------------------->
 				<ul>
 					<li><%=request.getServletPath()%></li>
-					<li><%=request.getServletContext().getRealPath("/")%></li>
 					<li><%=System.getProperty("cms.webapp")%></li>
 					<li><%=request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
 					+ request.getContextPath() + "/"%></li>
