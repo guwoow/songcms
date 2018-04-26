@@ -43,15 +43,23 @@
 							</div>
 							<!-- /.box-header -->
 							<div class="box-body">
-								<table class="table table-bordered" data-toggle="table" data-url="/function/functionList" data-height="500" data-pagination="true" pageSize="1">
-									<thead>
+								<table class="table table-bordered">
+									<tr>
+										<th style="width: 10px">#</th>
+										<th>名称</th>
+										<th>地址</th>
+										<th style="width: 80px">图标</th>
+									</tr>
+									<c:forEach var="function" items="${list}" varStatus="status">
 										<tr>
-											<th data-field="isEnable" data-checkbox="true"></th>
-											<th data-field="functionId" data-align="left">主键</th>
-											<th data-field="name" data-align="center" data-formate="">名称</th>
-											<th data-field="ico" data-align="center">图标</th>
+											<td></td>
+											<td><c:out value='${function.name}'/></td>
+											<td>
+												<a href="<c:out value='${function.url}'/>"><c:out value='${function.url}'/></a>
+											</td>
+											<td><span class="fa <c:out value='${function.ico}'/>"></span></td>
 										</tr>
-									</thead>
+									</c:forEach>
 								</table>
 							</div>
 							<!-- /.box-body -->
