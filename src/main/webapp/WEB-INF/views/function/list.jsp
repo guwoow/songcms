@@ -3,13 +3,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-<%@ include file="/WEB-INF/view/layout/head.jsp"%>
+<%@ include file="/WEB-INF/views/layout/head.jsp"%>
 </head>
 <body class="skin-default">
 	<div class="wrapper">
-		<%@ include file="/WEB-INF/view/layout/header.jsp"%>
+		<%@ include file="/WEB-INF/views/layout/header.jsp"%>
 
-		<%@ include file="/WEB-INF/view/layout/permission.jsp"%>
+		<%@ include file="/WEB-INF/views/layout/permission.jsp"%>
 
 		<div class="content-wrapper">
 			<section class="content-header">
@@ -117,7 +117,7 @@
 				</div>
 			</div>
 		</div>
-		<%@ include file="/WEB-INF/view/layout/footer.jsp"%>
+		<%@ include file="/WEB-INF/views/layout/footer.jsp"%>
 	</div>
 	<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/bootstrap-table/bootstrap-table.min.css">
 	<script src="<%=request.getContextPath()%>/resources/bootstrap-table/bootstrap-table.min.js"></script>
