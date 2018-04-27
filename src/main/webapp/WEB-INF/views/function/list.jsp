@@ -3,13 +3,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-<%@ include file="/WEB-INF/view/layout/head.jsp"%>
+<%@ include file="/WEB-INF/views/layout/head.jsp"%>
 </head>
 <body class="skin-default">
 	<div class="wrapper">
-		<%@ include file="/WEB-INF/view/layout/header.jsp"%>
+		<%@ include file="/WEB-INF/views/layout/header.jsp"%>
 
-		<%@ include file="/WEB-INF/view/layout/permission.jsp"%>
+		<%@ include file="/WEB-INF/views/layout/permission.jsp"%>
 
 		<div class="content-wrapper">
 			<section class="content-header">
@@ -43,23 +43,15 @@
 							</div>
 							<!-- /.box-header -->
 							<div class="box-body">
-								<table class="table table-bordered">
-									<tr>
-										<th style="width: 10px">#</th>
-										<th>名称</th>
-										<th>地址</th>
-										<th style="width: 80px">图标</th>
-									</tr>
-									<c:forEach var="function" items="${list}" varStatus="status">
+								<table class="table table-bordered" data-toggle="table" data-url="/function/functionList" data-height="500" data-pagination="true" pageSize="1">
+									<thead>
 										<tr>
-											<td></td>
-											<td><c:out value='${function.name}'/></td>
-											<td>
-												<a href="<c:out value='${function.url}'/>"><c:out value='${function.url}'/></a>
-											</td>
-											<td><span class="fa <c:out value='${function.ico}'/>"></span></td>
+											<th data-field="isEnable" data-checkbox="true"></th>
+											<th data-field="functionId" data-align="left">主键</th>
+											<th data-field="name" data-align="center" data-formate="">名称</th>
+											<th data-field="ico" data-align="center">图标</th>
 										</tr>
-									</c:forEach>
+									</thead>
 								</table>
 							</div>
 							<!-- /.box-body -->
@@ -125,7 +117,7 @@
 				</div>
 			</div>
 		</div>
-		<%@ include file="/WEB-INF/view/layout/footer.jsp"%>
+		<%@ include file="/WEB-INF/views/layout/footer.jsp"%>
 	</div>
 	<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/bootstrap-table/bootstrap-table.min.css">
 	<script src="<%=request.getContextPath()%>/resources/bootstrap-table/bootstrap-table.min.js"></script>

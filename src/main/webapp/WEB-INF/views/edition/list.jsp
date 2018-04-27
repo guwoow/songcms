@@ -2,13 +2,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-<%@ include file="/WEB-INF/view/layout/head.jsp"%>
+<%@ include file="/WEB-INF/views/layout/head.jsp"%>
 </head>
 <body class="skin-default">
 	<div class="wrapper">
-		<%@ include file="/WEB-INF/view/layout/header.jsp"%>
+		<%@ include file="/WEB-INF/views/layout/header.jsp"%>
 
-		<%@ include file="/WEB-INF/view/layout/permission.jsp"%>
+		<%@ include file="/WEB-INF/views/layout/permission.jsp"%>
 
 		<div class="content-wrapper">
 			<section class="content-header">
@@ -28,7 +28,6 @@
         		-------------------------->
 				<ul>
 					<li><%=request.getServletPath()%></li>
-					<li><%=request.getServletContext().getRealPath("/")%></li>
 					<li><%=System.getProperty("cms.webapp")%></li>
 					<li><%=request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
 					+ request.getContextPath() + "/"%></li>
@@ -38,7 +37,7 @@
 			</section>
 		</div>
 
-		<%@ include file="/WEB-INF/view/layout/footer.jsp"%>
+		<%@ include file="/WEB-INF/views/layout/footer.jsp"%>
 	</div>
 </body>
 </html>
